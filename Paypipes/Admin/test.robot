@@ -19,7 +19,7 @@ Login Test
         click element    name:password
         input text       xpath=/html/body/div[1]/div/div[1]/div[1]/form/div[1]/div[2]/input  ${password}
         click button     Login
-        sleep    10
+        sleep    8
         close browser
         END
 
