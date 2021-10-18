@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.5 on win32)" generated="20211018 18:06:35.376" rpa="false" schemaversion="2">
+<suite id="s1" name="Purchase Maxconnect" source="C:\Users\tromi\PycharmProjects\Robot_framework\Robotframework\SandBox\purchase_maxconnect.robot">
+<test id="s1-t1" name="Login With Test ID">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211018 18:06:35.498" level="INFO">Opening browser 'firefox' to base url 'https://sandbox.paypipes.net/'.</msg>
+<msg timestamp="20211018 18:06:35.498" level="INFO">Firefox driver log is always forced to to: C:\Users\tromi\PycharmProjects\Robot_framework\Robotframework\SandBox\geckodriver-25.log</msg>
+<status status="PASS" starttime="20211018 18:06:35.498" endtime="20211018 18:06:43.143"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211018 18:06:43.143" endtime="20211018 18:06:43.152"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:test_id</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211018 18:06:43.152" level="INFO">Clicking element 'name:test_id'.</msg>
+<status status="PASS" starttime="20211018 18:06:43.152" endtime="20211018 18:06:43.396"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//INPUT[@name="test_id"]</arg>
+<arg>${TEST_ID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211018 18:06:43.396" level="INFO">Typing text 'NaSfydwA0Rq3w1uFwYChDrDtkbXDnbwRazW/aLd0hrs=' into text field 'xpath=//INPUT[@name="test_id"]'.</msg>
+<status status="PASS" starttime="20211018 18:06:43.396" endtime="20211018 18:06:43.423"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[2]/form/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211018 18:06:43.423" endtime="20211018 18:06:43.441"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[2]/form/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211018 18:06:43.441" level="INFO">Clicking element 'xpath=/html/body/div[1]/div[2]/form/button'.</msg>
+<status status="PASS" starttime="20211018 18:06:43.441" endtime="20211018 18:06:45.530"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211018 18:06:47.532" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211018 18:06:45.530" endtime="20211018 18:06:47.532"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Login in sandbox</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211018 18:06:47.532" endtime="20211018 18:06:47.532"/>
+</kw>
+<status status="PASS" starttime="20211018 18:06:35.498" endtime="20211018 18:06:47.532"/>
+</test>
+<test id="s1-t2" name="Purchase via maxconnect">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://sandbox.paypipes.net/purchase</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211018 18:06:47.532" level="INFO">Opening url 'https://sandbox.paypipes.net/purchase'</msg>
+<status status="PASS" starttime="20211018 18:06:47.532" endtime="20211018 18:06:48.674"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211018 18:06:51.687" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211018 18:06:48.675" endtime="20211018 18:06:51.687"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:ctoken</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211018 18:06:51.687" level="INFO">Clicking element 'id:ctoken'.</msg>
+<status status="PASS" starttime="20211018 18:06:51.687" endtime="20211018 18:06:51.913"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://*[@id="ctoken"]</arg>
+<arg>${customer_token}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211018 18:06:51.913" level="INFO">Typing text 'bc72ce4f-a3a4-4c01-a681-8e088bab149d' into text field 'xpath://*[@id="ctoken"]'.</msg>
+<status status="PASS" starttime="20211018 18:06:51.913" endtime="20211018 18:06:51.940"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>gateway</arg>
+<arg>maxconnect</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20211018 18:06:51.949" level="INFO">Selecting options from selection list 'gateway' by value maxconnect.</msg>
+<status status="PASS" starttime="20211018 18:06:51.949" endtime="20211018 18:06:52.174"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211018 18:06:54.180" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211018 18:06:52.174" endtime="20211018 18:06:54.180"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>card</arg>
+<arg>false</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20211018 18:06:54.180" level="INFO">Selecting options from selection list 'card' by value false.</msg>
+<status status="PASS" starttime="20211018 18:06:54.180" endtime="20211018 18:06:54.429"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211018 18:06:56.431" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211018 18:06:54.429" endtime="20211018 18:06:56.431"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:amount</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211018 18:06:56.431" level="INFO">Clicking element 'id:amount'.</msg>
+<status status="PASS" starttime="20211018 18:06:56.431" endtime="20211018 18:06:56.654"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath://*[@id="amount"]</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20211018 18:06:56.656" endtime="20211018 18:06:56.670"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211018 18:06:58.675" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211018 18:06:56.670" endtime="20211018 18:06:58.675"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://*[@id="amount"]</arg>
+<arg>${amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211018 18:06:58.677" level="INFO">Typing text '12000' into text field 'xpath://*[@id="amount"]'.</msg>
+<status status="PASS" starttime="20211018 18:06:58.676" endtime="20211018 18:06:58.701"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211018 18:07:00.710" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211018 18:06:58.701" endtime="20211018 18:07:00.710"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>currency</arg>
+<arg>JPY</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20211018 18:07:00.710" level="INFO">Selecting options from selection list 'currency' by value JPY.</msg>
+<status status="PASS" starttime="20211018 18:07:00.710" endtime="20211018 18:07:00.954"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211018 18:07:02.962" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211018 18:07:00.954" endtime="20211018 18:07:02.962"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="description"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211018 18:07:02.962" level="INFO">Clicking element 'xpath://*[@id="description"]'.</msg>
+<status status="PASS" starttime="20211018 18:07:02.962" endtime="20211018 18:07:03.188"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://*[@id="description"]</arg>
+<arg>Test Purchase Mxconnect</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211018 18:07:03.188" level="INFO">Typing text 'Test Purchase Mxconnect' into text field 'xpath://*[@id="description"]'.</msg>
+<status status="PASS" starttime="20211018 18:07:03.188" endtime="20211018 18:07:03.224"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211018 18:07:03.224" level="INFO">Clicking button 'Submit'.</msg>
+<status status="PASS" starttime="20211018 18:07:03.224" endtime="20211018 18:07:06.735"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211018 18:07:16.746" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20211018 18:07:06.735" endtime="20211018 18:07:16.746"/>
+</kw>
+<status status="PASS" starttime="20211018 18:06:47.532" endtime="20211018 18:07:16.748"/>
+</test>
+<test id="s1-t3" name="Show transection history">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://sandbox.paypipes.net/transactions</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211018 18:07:16.750" level="INFO">Opening url 'https://sandbox.paypipes.net/transactions'</msg>
+<status status="PASS" starttime="20211018 18:07:16.750" endtime="20211018 18:07:18.077"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211018 18:07:20.085" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211018 18:07:18.077" endtime="20211018 18:07:20.085"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div[2]/div[1]/div[1]/div/div/table/tbody/tr[1]/td[9]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211018 18:07:20.085" level="INFO">Clicking element 'xpath:/html/body/div/div[2]/div[1]/div[1]/div/div/table/tbody/tr[1]/td[9]/a/span'.</msg>
+<status status="PASS" starttime="20211018 18:07:20.085" endtime="20211018 18:07:21.011"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211018 18:07:26.024" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211018 18:07:21.014" endtime="20211018 18:07:26.024"/>
+</kw>
+<status status="PASS" starttime="20211018 18:07:16.750" endtime="20211018 18:07:26.025"/>
+</test>
+<status status="PASS" starttime="20211018 18:06:35.376" endtime="20211018 18:07:26.028"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Purchase Maxconnect">Purchase Maxconnect</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
